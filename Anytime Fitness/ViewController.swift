@@ -9,17 +9,23 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var staffButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        //create all your ui elements inside here
+        print("view loaded")
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 
+    @IBAction func buttonClick(_ sender: Any) {
+        print("i have been clicked")
+        UIApplication.shared.openURL(NSURL(string: "http://google.com")! as URL)
+
+    }
+    
+    
 
 }
 
